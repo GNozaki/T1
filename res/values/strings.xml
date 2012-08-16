@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- activity names -->
+    <string name="title_activity_start">Splash Screen</string>
+    <string name="title_activity_main_menu">Main Menu</string>
+
+    <!-- page titles -->
+
+
+    <!-- button strings -->
+    <string name="splash_btn_ok">Avançar</string>
+
+    <!-- everything else -->
+    <string name="app_name">tcc</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="main_menu_welcome">Welcome to Main Menu!</string>
+    <string name="title_activity_cases_list">CasesListActivity</string>
+
+</resources>
