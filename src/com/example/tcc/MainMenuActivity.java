@@ -1,11 +1,14 @@
 package com.example.tcc;
 
+import com.example.tcc.models.User;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainMenuActivity extends Activity {
 	
@@ -24,6 +27,14 @@ public class MainMenuActivity extends Activity {
 						CasesListActivity.class));
 			}        	
         });
+        
+        //Obtém o usuário atual
+        User current_user = ((GlobalStateApp) getApplication()).getCurrentUser();
+        
+        if(current_user.username != null){
+        	TextView welcome = (TextView) findViewById(R.id.main_menu_welcome_text);
+        	welcome.setText("Bem vindo "+current_user.username);
+        }
     }
 
     @Override

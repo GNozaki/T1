@@ -16,5 +16,6 @@
     <string name="menu_settings">Settings</string>
     <string name="main_menu_welcome">Welcome to Main Menu!</string>
     <string name="title_activity_cases_list">CasesListActivity</string>
+    <string name="title_activity_case_details">CaseDetails</string>
 
 </resources>

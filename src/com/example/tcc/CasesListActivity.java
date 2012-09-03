@@ -7,9 +7,13 @@ import com.example.tcc.models.Case;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.util.Log;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+
 
 public class CasesListActivity extends Activity {
 
@@ -54,6 +58,17 @@ public class CasesListActivity extends Activity {
         
         case_adapter.notifyDataSetChanged();
         
+        lstTest.setOnItemClickListener(new OnItemClickListener() {
+
+			public void onItemClick(AdapterView<?> parent, View view, int position,
+					long id) {
+				Case c = (Case) lstTest.getItemAtPosition(position);
+				//Log.i("DEBUG", c.name);
+				((GlobalStateApp) getApplication()).setCaseSelected(c);
+				CasesListActivity.this.startActivity(new Intent(CasesListActivity.this,
+						CaseDetailsActivity.class));
+			}
+		});
     }
 
     @Override
