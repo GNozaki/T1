@@ -3,6 +3,7 @@ package com.example.tcc;
 import com.example.tcc.models.User;
 
 import android.os.Bundle;
+import android.provider.Settings.Secure;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
@@ -27,6 +28,16 @@ public class MainMenuActivity extends Activity {
 						CasesListActivity.class));
 			}        	
         });
+		//Obtém o android_id do device android
+		String android_id =  Secure.getString(getContentResolver(), Secure.ANDROID_ID);
+		
+		//Faz a requisição para checar se o usuário já usou o aplicativo
+		UserFunctions userFunctions = new UserFunctions();
+		User actual_user = userFunctions.getUser(android_id);
+		
+		//Grava o usuário atual utilizado
+		GlobalStateApp globalApp = (GlobalStateApp) getApplication();
+		globalApp.setCurrentUser(actual_user);
         
         //Obtém o usuário atual
         User current_user = ((GlobalStateApp) getApplication()).getCurrentUser();

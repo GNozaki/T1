@@ -8,19 +8,10 @@
         android:targetSdkVersion="15" />
 
     <application
-        android:name="com.example.tcc.GlobalStateApp"
-        android:icon="@drawable/ic_launcher"
+        android:name="com.example.tcc.GlobalStateApp"        
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name=".StartActivity"
-            android:label="@string/title_activity_start" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        android:icon="@drawable/ic_action_icone"
+        android:theme="@android:style/Theme.Holo" >
         <activity
             android:name=".MainMenuActivity"
             android:label="@string/title_activity_main_menu" >
@@ -33,20 +24,10 @@
         <activity
             android:name=".CasesListActivity"
             android:label="@string/title_activity_cases_list" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".CaseDetailsActivity"
             android:label="@string/title_activity_case_details" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
