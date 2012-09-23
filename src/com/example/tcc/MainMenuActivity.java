@@ -1,6 +1,6 @@
 package com.example.tcc;
 
-import com.example.tcc.models.User;
+import com.example.tcc.models.Usuario;
 
 import android.os.Bundle;
 import android.provider.Settings.Secure;
@@ -17,6 +17,7 @@ public class MainMenuActivity extends Activity {
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
+    	;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         
@@ -33,14 +34,14 @@ public class MainMenuActivity extends Activity {
 		
 		//Faz a requisição para checar se o usuário já usou o aplicativo
 		UserFunctions userFunctions = new UserFunctions();
-		User actual_user = userFunctions.getUser(android_id);
+		Usuario actual_user = userFunctions.getUser(android_id);
 		
 		//Grava o usuário atual utilizado
 		GlobalStateApp globalApp = (GlobalStateApp) getApplication();
 		globalApp.setCurrentUser(actual_user);
         
         //Obtém o usuário atual
-        User current_user = ((GlobalStateApp) getApplication()).getCurrentUser();
+        Usuario current_user = ((GlobalStateApp) getApplication()).getCurrentUser();
         
         if(current_user.username != null){
         	TextView welcome = (TextView) findViewById(R.id.main_menu_welcome_text);

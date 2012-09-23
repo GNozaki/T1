@@ -10,6 +10,7 @@
     <!-- button strings -->
     <string name="splash_btn_ok">Avançar</string>
     <string name="main_menu_btn_choose_cases">Casos disponíveis</string>
+    <string name="main_menu_btn_cases_ongoing">Casos em andamento</string>
 
     <!-- everything else -->
     <string name="app_name">tcc</string>

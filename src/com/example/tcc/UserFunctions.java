@@ -9,8 +9,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.example.tcc.models.Case;
-import com.example.tcc.models.User;
+import com.example.tcc.models.Caso;
+import com.example.tcc.models.Usuario;
 import com.example.tcc.parsers.JSONParser;
 
 public class UserFunctions {
@@ -32,8 +32,8 @@ public class UserFunctions {
 		return json;
 	}
 	
-	public User getUser(String pAndroidId){
-		User retorno = null;
+	public Usuario getUser(String pAndroidId){
+		Usuario retorno = null;
 		JSONObject jsonObj = getUserByAndroidId(pAndroidId);
 		
 		try {
@@ -41,10 +41,11 @@ public class UserFunctions {
 			for(int i=0; i < jsonArray.length();i++){
 				JSONObject childObject = jsonArray.getJSONObject(i);
 				int id = childObject.getInt("id");
+				int num_cell = childObject.getInt("num_celular");
 				String username = childObject.getString("username");
-				String email = childObject.getString("email");
-				User user = new User(id, pAndroidId, username, email);
-				retorno = user;
+				String aparelho = childObject.getString("aparelho");
+				Usuario usuario = new Usuario(id, pAndroidId, username, num_cell, aparelho);
+				retorno = usuario;
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();

@@ -32,6 +32,6 @@
     </application>
 
     <!-- Allow to connect with internet -->
-    <uses-permission android:name="android.permission.INTERNET" />
+    
 
 </manifest>

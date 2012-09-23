@@ -3,7 +3,7 @@ package com.example.tcc;
 import java.util.ArrayList;
 
 import com.example.tcc.adapters.CaseListAdapter;
-import com.example.tcc.models.Case;
+import com.example.tcc.models.Caso;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -25,7 +25,7 @@ public class CasesListActivity extends Activity {
 	/*
 	 * Lista que conterá os casos. 
 	 */
-	ArrayList<Case> lst_casos = null;
+	ArrayList<Caso> lst_casos = null;
 	
 	/*
 	 * Adapter da lista de casos
@@ -44,7 +44,7 @@ public class CasesListActivity extends Activity {
         //caseFunctions.getListCases();
         
         //Inicializa a lista de casos
-        lst_casos = new ArrayList<Case>();
+        lst_casos = new ArrayList<Caso>();
         
         case_adapter = new CaseListAdapter(CasesListActivity.this, android.R.layout.simple_list_item_1, lst_casos);
         
@@ -62,7 +62,7 @@ public class CasesListActivity extends Activity {
 
 			public void onItemClick(AdapterView<?> parent, View view, int position,
 					long id) {
-				Case c = (Case) lstTest.getItemAtPosition(position);
+				Caso c = (Caso) lstTest.getItemAtPosition(position);
 				//Log.i("DEBUG", c.name);
 				((GlobalStateApp) getApplication()).setCaseSelected(c);
 				CasesListActivity.this.startActivity(new Intent(CasesListActivity.this,

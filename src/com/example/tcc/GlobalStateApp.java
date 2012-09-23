@@ -1,27 +1,27 @@
 package com.example.tcc;
 
-import com.example.tcc.models.Case;
-import com.example.tcc.models.User;
+import com.example.tcc.models.Caso;
+import com.example.tcc.models.Usuario;
 
 import android.app.Application;
 
 public class GlobalStateApp extends Application {
-	private User current_user;
-	private Case case_selected;
+	private Usuario current_user;
+	private Caso case_selected;
 	
-	public User getCurrentUser(){
+	public Usuario getCurrentUser(){
 		return current_user;
 	}
 	
-	public void setCurrentUser(User pUser){
+	public void setCurrentUser(Usuario pUser){
 		this.current_user = pUser;
 	}
 	
-	public Case getCaseSelected(){
+	public Caso getCaseSelected(){
 		return case_selected;
 	}
 	
-	public void setCaseSelected(Case pCase){
+	public void setCaseSelected(Caso pCase){
 		this.case_selected = pCase;
 	}
 }

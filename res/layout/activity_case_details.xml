@@ -24,11 +24,20 @@
         android:text="@string/hello_world" />
 
     <Button
-        android:id="@+id/case_details_btn_choosecase"
+        android:id="@+id/case_details_btn_choose_as_counter_part"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="Jogar esse caso" />
+        android:layout_alignParentRight="true"
+        android:text="Como contraparte" />
+
+    <Button
+        android:id="@+id/case_details_btn_choose_as_part"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/case_details_btn_choose_as_counter_part"
+        android:layout_alignLeft="@+id/case_details_btn_choose_as_counter_part"
+        android:layout_marginBottom="21dp"
+        android:text="Jogar como parte" />
 
 </RelativeLayout>
